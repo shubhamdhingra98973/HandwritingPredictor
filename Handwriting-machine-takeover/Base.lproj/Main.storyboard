@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DrawingVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DrawingVC" customModule="Handwriting_machine_takeover" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="duj-Y0-3gx">
+                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="duj-Y0-3gx" secondAttribute="height" multiplier="1:1" id="cf2-Hj-Vab"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the PREDICT button below." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSh-kv-x9M">
+                                <rect key="frame" x="0.0" y="474" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tt-Ys-Lx1">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <color key="backgroundColor" red="0.42745098039215684" green="0.73725490196078436" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zol-Rh-ER8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="PREDICT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="predictBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lck-Mb-OAY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MSh-kv-x9M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8CD-7h-RYn"/>
+                            <constraint firstItem="0Tt-Ys-Lx1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Ot-92-bnd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="duj-Y0-3gx" secondAttribute="trailing" id="Dih-gF-ukV"/>
+                            <constraint firstItem="duj-Y0-3gx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F9T-ld-TeR"/>
+                            <constraint firstItem="duj-Y0-3gx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FE5-44-LHM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MSh-kv-x9M" secondAttribute="trailing" id="QJh-GN-bMK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Tt-Ys-Lx1" secondAttribute="trailing" id="TFE-Z7-eJv"/>
+                            <constraint firstItem="MSh-kv-x9M" firstAttribute="centerX" secondItem="duj-Y0-3gx" secondAttribute="centerX" id="iIQ-5R-IQf"/>
+                            <constraint firstItem="duj-Y0-3gx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="nG2-sG-nYG"/>
+                            <constraint firstItem="0Tt-Ys-Lx1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pJw-uV-Qnm"/>
+                            <constraint firstItem="MSh-kv-x9M" firstAttribute="top" secondItem="duj-Y0-3gx" secondAttribute="bottom" constant="30" id="vsn-Dh-FNH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawingImageView" destination="duj-Y0-3gx" id="Abl-Zr-G02"/>
+                        <outlet property="predictionLabel" destination="MSh-kv-x9M" id="m0e-rx-DOB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="119"/>
+        </scene>
+    </scenes>
+</document>
